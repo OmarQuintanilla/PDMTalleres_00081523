@@ -8,6 +8,7 @@ import androidx.navigation3.ui.NavDisplay
 import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailScreen
 import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListScreen
 import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListViewModel
+import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailViewModel
 import com.example.pdm0126.foodspot.screens.search.SearchScreen
 
 @Composable
@@ -32,8 +33,9 @@ fun FoodSpotNavigation() {
             }
 
             entry<RestaurantDetailRoute> { key ->
+                val viewModel = RestaurantDetailViewModel(restaurantId = key.restaurantId)
                 RestaurantDetailScreen(
-                    restaurantId = key.restaurantId,
+                    viewModel = viewModel,
                     onBack = { backStack.removeLastOrNull() }
                 )
             }
