@@ -15,7 +15,7 @@ val dummyRestaurants = listOf(
         categories = listOf("Mexicana"),
         menu = listOf(
             Dish(id = 101, name = "Tacos al Pastor", description = "Tortilla de maíz con carne de cerdo marinada, piña, cebolla y cilantro", imageUrl = "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800"),
-            Dish(id = 102, name = "Quesadilla de Chicharrón", description = "Tortilla gruesa rellena de chicharrón prensado y queso Oaxaca", imageUrl = "https://images.unsplash.com/photo-1611915365928-565c527a0590?q=80&w=800"),
+            Dish(id = 102, name = "Quesadilla de Chicharrón", description = "Tortilla gruesa rellena de chicharrón prensado y queso Oaxaca", imageUrl = "https://i.ytimg.com/vi/8utGnBMc9-s/maxresdefault.jpg"),
             Dish(id = 103, name = "Burrito Supreme", description = "Harina de trigo rellena de carne, frijoles, arroz, guacamole y crema", imageUrl = "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=800")
         )
     ),
@@ -26,7 +26,7 @@ val dummyRestaurants = listOf(
         imageUrl = "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000",
         categories = listOf("Mexicana"),
         menu = listOf(
-            Dish(id = 201, name = "Enchiladas Rojas", description = "Tortillas bañadas en salsa roja, rellenas de pollo y gratinadas con queso", imageUrl = "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=800"),
+            Dish(id = 201, name = "Enchiladas Rojas", description = "Tortillas bañadas en salsa roja, rellenas de pollo y gratinadas con queso", imageUrl = "https://tse3.mm.bing.net/th/id/OIP.fcpJB-JqJys_lzxO-cdl_QHaEs?rs=1&pid=ImgDetMain&o=7&rm=3"),
             Dish(id = 202, name = "Guacamole con Totopos", description = "Aguacate fresco machacado con tomate, cebolla, cilantro y limón", imageUrl = "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=800"),
             Dish(id = 203, name = "Tamales Oaxaqueños", description = "Masa de maíz con mole negro y pollo, envuelta en hoja de plátano", imageUrl = "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800")
         )
@@ -66,7 +66,7 @@ val dummyRestaurants = listOf(
         menu = listOf(
             Dish(id = 501, name = "Smash Burger", description = "Doble carne smash, queso cheddar, cebolla caramelizada y salsa especial", imageUrl = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800"),
             Dish(id = 502, name = "Papas Trufadas", description = "Papas fritas crujientes con aceite de trufa y parmesano rallado", imageUrl = "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=800"),
-            Dish(id = 503, name = "Chicken Wings BBQ", description = "Alitas de pollo glaseadas en salsa barbacoa con un toque picante", imageUrl = "https://images.unsplash.com/photo-1561758033-d8f14c09f9c5?q=80&w=800")
+            Dish(id = 503, name = "Chicken Wings BBQ", description = "Alitas de pollo glaseadas en salsa barbacoa con un toque picante", imageUrl = "https://www.kitchensanctuary.com/wp-content/uploads/2020/06/bbq-chicken-wings-tall2-50.jpg")
         )
     ),
     Restaurant(
@@ -85,10 +85,10 @@ val dummyRestaurants = listOf(
         id = 7,
         name = "Hot Dog Express",
         description = "Perritos calientes gourmet con toppings ilimitados",
-        imageUrl = "https://images.unsplash.com/photo-1542345812-d98b5cd6cf98?q=80&w=1000",
+        imageUrl = "https://estaticos-cdn.prensaiberica.es/clip/a7142937-40ae-4701-9423-c19e7a60530d_16-9-discover-aspect-ratio_default_1218557.jpg",
         categories = listOf("Comida Rápida"),
         menu = listOf(
-            Dish(id = 701, name = "Hot Dog Chicago", description = "Salchicha de res con pepinillos, tomate, cebolla, relish y mostaza", imageUrl = "https://images.unsplash.com/photo-1542345812-d98b5cd6cf98?q=80&w=800"),
+            Dish(id = 701, name = "Hot Dog Chicago", description = "Salchicha de res con pepinillos, tomate, cebolla, relish y mostaza", imageUrl = "https://static01.nyt.com/images/2022/07/27/dining/27Chicagodogrex/05Chicagodogrex-threeByTwoMediumAt2X.jpg"),
             Dish(id = 702, name = "Papas con Chili", description = "Papas fritas cubiertas de chili de carne, queso cheddar y jalapeños", imageUrl = "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=800"),
             Dish(id = 703, name = "Malteada de Oreo", description = "Helado de vainilla con galletas Oreo trituradas y crema batida", imageUrl = "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=800")
         )
@@ -114,7 +114,7 @@ val dummyRestaurants = listOf(
         imageUrl = "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000",
         categories = listOf("Típica"),
         menu = listOf(
-            Dish(id = 901, name = "Pupusas de Queso", description = "Tortilla gruesa de maíz rellena de queso mozzarella y loroco", imageUrl = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800"),
+            Dish(id = 901, name = "Pupusas de Queso", description = "Tortilla gruesa de maíz rellena de queso mozzarella y loroco", imageUrl = "https://img-global.cpcdn.com/recipes/90ff54109e703b98/751x532cq70/pupusas-de-queso-foto-principal.jpg"),
             Dish(id = 902, name = "Yuca Frita con Chicharrón", description = "Yuca cocida y frita acompañada de chicharrón curtido y salsa de tomate", imageUrl = "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800"),
             Dish(id = 903, name = "Atol de Elote", description = "Bebida tradicional a base de elote tierno, leche, canela y azúcar", imageUrl = "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800")
         )
@@ -147,10 +147,10 @@ val dummyRestaurants = listOf(
         id = 12,
         name = "Desayunos Doña María",
         description = "Desayunos típicos salvadoreños con elote, plátano y más",
-        imageUrl = "https://images.unsplash.com/photo-1533089862017-5614ec87e574?q=80&w=1000",
+        imageUrl = "https://img.freepik.com/vector-premium/menu-desayuno-ilustracion-comida-tradicional-manana_97761-107.jpg",
         categories = listOf("Típica"),
         menu = listOf(
-            Dish(id = 1201, name = "Desayuno Plátano", description = "Plátano frito, frijoles, crema, queso y huevos al gusto", imageUrl = "https://images.unsplash.com/photo-1533089862017-5614ec87e574?q=80&w=800"),
+            Dish(id = 1201, name = "Desayuno Plátano", description = "Plátano frito, frijoles, crema, queso y huevos al gusto", imageUrl = "https://i.pinimg.com/originals/16/4e/97/164e9797bf5fa5cc963ec35f243d3df0.jpg"),
             Dish(id = 1202, name = "Atol Chuco", description = "Atol de maíz fermentado con chicharrón, limón y albahaca", imageUrl = "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800"),
             Dish(id = 1203, name = "Quesadilla Salvadoreña", description = "Pan dulce de queso salvadoreño, crujiente por fuera y suave por dentro", imageUrl = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800")
         )
