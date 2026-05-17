@@ -7,6 +7,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailScreen
 import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListScreen
+import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListViewModel
 import com.example.pdm0126.foodspot.screens.search.SearchScreen
 
 @Composable
@@ -18,7 +19,9 @@ fun FoodSpotNavigation() {
         onBack = { backStack.removeLastOrNull() },
         entryProvider = entryProvider {
             entry<RestaurantListRoute> {
+                val viewModel = RestaurantListViewModel()
                 RestaurantListScreen(
+                    viewModel = viewModel,
                     onRestaurantClick = { id ->
                         backStack.add(RestaurantDetailRoute(restaurantId = id))
                     },
