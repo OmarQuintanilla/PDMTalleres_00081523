@@ -10,6 +10,7 @@ import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListScreen
 import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListViewModel
 import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailViewModel
 import com.example.pdm0126.foodspot.screens.search.SearchScreen
+import com.example.pdm0126.foodspot.screens.search.SearchViewModel
 
 @Composable
 fun FoodSpotNavigation() {
@@ -41,8 +42,13 @@ fun FoodSpotNavigation() {
             }
 
             entry<SearchRoute> {
+                val viewModel = SearchViewModel()
                 SearchScreen(
-                    onBack = { backStack.removeLastOrNull() }
+                    viewModel = viewModel,
+                    onBack = { backStack.removeLastOrNull() },
+                    onRestaurantClick = { id ->
+                        backStack.add(RestaurantDetailRoute(restaurantId = id))
+                    }
                 )
             }
         }

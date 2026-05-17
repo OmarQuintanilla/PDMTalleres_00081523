@@ -28,4 +28,15 @@ class FoodApiRepository : FoodRepository {
                     dish.description.lowercase().contains(lowerQuery)
         }
     }
+
+    override suspend fun searchRestaurants(query: String): List<Restaurant> {
+        delay(500)
+        if (query.isBlank()) return emptyList()
+
+        val lowerQuery = query.lowercase()
+        return dummyRestaurants.filter { restaurant ->
+            restaurant.name.lowercase().contains(lowerQuery) ||
+                    restaurant.menu.any { dish -> dish.name.lowercase().contains(lowerQuery) }
+        }
+    }
 }

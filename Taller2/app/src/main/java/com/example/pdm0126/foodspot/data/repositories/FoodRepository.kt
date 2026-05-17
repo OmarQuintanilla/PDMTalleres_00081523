@@ -7,4 +7,5 @@ interface FoodRepository {
     suspend fun getRestaurants(): List<Restaurant>
     suspend fun getRestaurantById(id: Int): Restaurant?
     suspend fun searchDishes(query: String): List<Dish>
+    suspend fun searchRestaurants(query: String): List<Restaurant>
 }
