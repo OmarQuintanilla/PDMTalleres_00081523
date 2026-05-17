@@ -3,6 +3,7 @@ package com.example.pdm0126.foodspot.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.entryProvider
+import androidx.compose.runtime.remember
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailScreen
@@ -11,19 +12,20 @@ import com.example.pdm0126.foodspot.screens.restaurantList.RestaurantListViewMod
 import com.example.pdm0126.foodspot.screens.resturantDetails.RestaurantDetailViewModel
 import com.example.pdm0126.foodspot.screens.search.SearchScreen
 import com.example.pdm0126.foodspot.screens.search.SearchViewModel
-
 @Composable
 fun FoodSpotNavigation() {
     val backStack = rememberNavBackStack(RestaurantListRoute)
+
+    val restaurantListViewModel = remember { RestaurantListViewModel() }
+    val searchViewModel = remember { SearchViewModel() }
 
     NavDisplay(
         backStack = backStack,
         onBack = { backStack.removeLastOrNull() },
         entryProvider = entryProvider {
             entry<RestaurantListRoute> {
-                val viewModel = RestaurantListViewModel()
                 RestaurantListScreen(
-                    viewModel = viewModel,
+                    viewModel = restaurantListViewModel,
                     onRestaurantClick = { id ->
                         backStack.add(RestaurantDetailRoute(restaurantId = id))
                     },
@@ -34,17 +36,16 @@ fun FoodSpotNavigation() {
             }
 
             entry<RestaurantDetailRoute> { key ->
-                val viewModel = RestaurantDetailViewModel(restaurantId = key.restaurantId)
+                val detailViewModel = RestaurantDetailViewModel(restaurantId = key.restaurantId)
                 RestaurantDetailScreen(
-                    viewModel = viewModel,
+                    viewModel = detailViewModel,
                     onBack = { backStack.removeLastOrNull() }
                 )
             }
 
             entry<SearchRoute> {
-                val viewModel = SearchViewModel()
                 SearchScreen(
-                    viewModel = viewModel,
+                    viewModel = searchViewModel,
                     onBack = { backStack.removeLastOrNull() },
                     onRestaurantClick = { id ->
                         backStack.add(RestaurantDetailRoute(restaurantId = id))

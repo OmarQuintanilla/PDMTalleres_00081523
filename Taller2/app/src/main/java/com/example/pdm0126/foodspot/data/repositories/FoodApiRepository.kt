@@ -7,7 +7,7 @@ import kotlinx.coroutines.delay
 
 class FoodApiRepository : FoodRepository {
     override suspend fun getRestaurants(): List<Restaurant> {
-        delay(1500)
+        delay(2000)
         return dummyRestaurants
     }
 
@@ -36,7 +36,9 @@ class FoodApiRepository : FoodRepository {
         val lowerQuery = query.lowercase()
         return dummyRestaurants.filter { restaurant ->
             restaurant.name.lowercase().contains(lowerQuery) ||
-                    restaurant.menu.any { dish -> dish.name.lowercase().contains(lowerQuery) }
+                    restaurant.description.lowercase().contains(lowerQuery) ||
+                    restaurant.menu.any { dish -> dish.name.lowercase().contains(lowerQuery) ||
+                            dish.description.lowercase().contains(lowerQuery)}
         }
     }
 }
